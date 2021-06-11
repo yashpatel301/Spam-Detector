@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <title>Result</title>
+  </head>
+  <body>
+    <div class="login-box">
+      <h2 style="margin-bottom:40px;">RESULTS FOR COMMENT</h2>
+  <div class="user-box">
+         
+         {% if prediction == 1%}
+          <h2 style="color:rgb(255, 0, 0);">It is a Spam</h2>
+          {% elif prediction == 0%}
+          <h2 style="color:rgb(96, 240, 96);">Not a Spam (It is a Ham)</h2>
+          {% endif %}
+        </div>
+       
+        
+      
+    </div>
+  </body>
+</html>
